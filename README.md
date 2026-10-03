@@ -1,3 +1,21 @@
+
+
+
+<img width="1456" height="720" alt="xr1" src="https://github.com/user-attachments/assets/530e71ce-bf83-4dbd-bfde-52a3f124d3eb" />
+
+
+
+
+
+<p align="left">
+  <img src="https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/HASHLIB-000000?style=for-the-badge&logo=security&logoColor=white" alt="Hashlib">
+  <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" alt="JSON">
+  <img src="https://img.shields.io/badge/OS-333333?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="OS">
+  <img src="https://img.shields.io/badge/RSA-00599C?style=for-the-badge&logo=codeforces&logoColor=white" alt="RSA">
+  <img src="https://img.shields.io/badge/LINUX-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+</p>
+
 # IDA Pro License Generator and Binary Patcher
 
 ## Overview
@@ -14,10 +32,11 @@ This repository contains an automated Python script designed to generate customi
 ---
 
 ## Technologies and Modules Used
-The script is built entirely using Python's standard library, ensuring native execution without heavy external dependencies:
-- **`hashlib`**: Utilized for generating the SHA-256 cryptographic digest over the serialized JSON license payload string.
-- **`json`**: Utilized for the structured serialization of license data sorted alphabetically to maintain signature integrity.
-- **`os`**: Utilized for verifying the existence of binary file paths within the local working directory.
+The script is built entirely using Python's standard library, leveraging specific built-in modules for data manipulation, file handling, and cryptographic hashing:
+- **`hashlib`**: Utilized specifically for invoking SHA-256 (`hashlib.sha256()`) to compute secure digests over the alphabetical JSON data strings.
+- **`json`**: Utilized for structural serialization, indentation-free formatting, and alphabetical key sorting (`json.dumps(obj, sort_keys=True)`) to preserve signature validity.
+- **`os`**: Utilized to interface with the operating system file paths (`os.path.exists()`) to verify target binaries before executing byte replacements.
+- **`RSA / BigInt Math`**: Custom byte-to-integer conversion routines (`int.from_bytes` / `to_bytes`) handling low-level modular exponentiation via Python native integer handling.
 
 ---
 
